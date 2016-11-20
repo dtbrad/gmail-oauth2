@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'gmail', git: 'https://github.com/gmailgem/gmail.git', require: 'gmail'
+gem 'omniauth-google-oauth2', '~> 0.4.1'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -36,6 +40,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'pry'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
