@@ -1,1 +1,10 @@
 <h4>Home Page</h4>
+
+<% if current_user %>
+  Signed in as: <%= current_user.name %> |
+  <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <p> The subject line of your newest email of your inbox is: </p>
+  <h4> <%= @subject %> </h4>
+<% else %>
+  <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+<% end %>
